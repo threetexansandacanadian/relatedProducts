@@ -1,20 +1,21 @@
-const { Client } = require('pg');
-const dotenv = require('dotenv');
-dotenv.config({path: '../.env'});
+const db = require('./db-config');
 
-const config = {
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB
-}
+// methods for interacting with the DB
 
-const client = new Client(config);
+// Things
 
-client.connect((err) => {
-  if (err) {
-    console.error('connection error', err.stack)
-  } else {
-    console.log('connected')
-  }
-});
+const selectAll = () => {
+  const queryString = 'SELECT * FROM products;';
+
+  db.query(queryString, (err, theGoods) => {
+    if (err){
+      console.log(`I'll be monkey food if I don't leave!`);
+      db.end();
+    } else {
+      console.log(theGoods);
+      db.end();
+    }
+  })
+};
+
+selectAll();
