@@ -12,6 +12,7 @@ const client = new Client(config);
 
 // connect to db using values fron config,
 // contains confirmation logs upon connection/error
+// comment to clear branch `connectservertodb` from terminal
 
 client.connect((err) => {
   if (err) {
