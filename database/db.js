@@ -5,12 +5,12 @@ const selectAll = (cb) => {
   db.query(queryString, (err, theGoods) => {
     if (err){
       console.log(`I'll be monkey food if I don't leave!`);
-      // db.end();
       cb(err);
+      db.end();
     } else {
-      console.log(theGoods);
-      // db.end();
+      console.log(theGoods.rows);
       cb(theGoods);
+      db.end();
     }
   })
 };
