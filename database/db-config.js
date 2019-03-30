@@ -1,6 +1,5 @@
 const { Client } = require('pg');
-const dotenv = require('dotenv');
-dotenv.config({path: '../.env'});
+require('dotenv').config();
 
 const config = {
   host: process.env.DB_HOST,
@@ -13,12 +12,14 @@ const client = new Client(config);
 
 // connect to db using values fron config,
 // contains confirmation logs upon connection/error
+
 client.connect((err) => {
   if (err) {
-    console.error('connection error', err.stack)
+    console.error('connection error', err);
   } else {
-    console.log('DB connection establish!')
+    console.log('DB connection establish!');
   }
 });
 
-module.exports = client;
+
+module.exports = { client };
