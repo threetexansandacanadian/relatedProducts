@@ -1,21 +1,29 @@
 const db = require('./db-config');
 
-// methods for interacting with the DB
-
-// Things
-
-const selectAll = () => {
+const selectAll = (cb) => {
   const queryString = 'SELECT * FROM products;';
-
   db.query(queryString, (err, theGoods) => {
     if (err){
       console.log(`I'll be monkey food if I don't leave!`);
-      db.end();
+      // db.end();
+      cb(err);
     } else {
       console.log(theGoods);
-      db.end();
+      // db.end();
+      cb(theGoods);
     }
   })
 };
 
-selectAll();
+const insertOne = () => {
+}
+
+// selectAll();
+
+// methods for interacting with the DB
+
+// inserts one item into DB with params
+
+module.exports = {
+  selectAll
+};
