@@ -12,7 +12,7 @@ app.get('/api/products', (req, res) => {
   //usually the req would have a search term, like * to query the db to get all
   db.selectAll(() => {
     console.log('made it db from server!')
-    res.send('sunglasses')
+    res.send(`:sunglasses:`)
   })
 })
 

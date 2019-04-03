@@ -15,9 +15,6 @@ const selectAll = (cb) => {
   })
 };
 
-const insertOne = () => {
-}
-
 // selectAll();
 
 // methods for interacting with the DB
