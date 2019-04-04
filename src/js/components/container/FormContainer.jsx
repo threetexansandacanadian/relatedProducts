@@ -28,8 +28,15 @@ class FormContainer extends Component {
     );
   }
 }
+<<<<<<< HEAD
 
 const wrapper = document.getElementById("create-article-form");
 wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
 
 export default FormContainer;
+=======
+export default FormContainer;
+
+const wrapper = document.getElementById("create-article-form");
+wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
+>>>>>>> e17a5971ef08b00d17373d21b7bca7b40366d598

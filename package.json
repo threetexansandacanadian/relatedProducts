@@ -5,10 +5,15 @@
   "main": "index.js",
   "scripts": {
     "SCV": "nodemon ./server/server.js",
+<<<<<<< HEAD
     "dev": "webpack --mode development --env.dist=false",
     "dev:dist": "webpack --mode development",
     "build": "webpack --mode development webpack.config.js",
     "start": "webpack-dev-server --open --mode development"
+=======
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+>>>>>>> e17a5971ef08b00d17373d21b7bca7b40366d598
   },
   "repository": {
     "type": "git",
@@ -30,6 +35,7 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
@@ -45,6 +51,17 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "prop-types": "^15.7.2",
+=======
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+>>>>>>> e17a5971ef08b00d17373d21b7bca7b40366d598
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
