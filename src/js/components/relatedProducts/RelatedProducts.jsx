@@ -7,25 +7,35 @@ export default class RelatedProducts extends Component {
   constructor(props){
     super(props);
 
-    this.state = {}
+    this.state = {
+      entries: ['Howdy', `Yee'Haw`, 'Steak', 'Moose'], // dummy data
+      mountStatus: false,
+      page: (<div> Nothing here </div>)
+    }
   }
 
+  //request data upon mounting
   componentDidMount(){
-    // Do  get request to the server
-    $.get('/api/products', (data) => { 
-      //Cool I got the goods now, I only need the first 10 or 15 to save to state
-
-      this.state.entries = data;
+    $.get('/api/products', (data) => {
+      this.setState({
+        entries: data, 
+        mountStatus: true,
+        page: (<ProductList entries={data}/>)
+      });
 
       console.log(this.state);
     });
   }
 
   render() {
+
     return (
       <div>
         Behold!
-        <ProductList />
+        <div>
+          <span>Go left / Go right</span>
+        </div>
+        {this.state.page}
       </div>
     );
   }
