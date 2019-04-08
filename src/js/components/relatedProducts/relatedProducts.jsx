@@ -12,7 +12,7 @@ export default class RelatedProducts extends Component {
 
   componentDidMount(){
     // Do  get request to the server
-    $.get('/', () => { console.log ('there!') })
+    $.get('/api/products', (data) => { console.log (data) })
   }
 
   render() {
