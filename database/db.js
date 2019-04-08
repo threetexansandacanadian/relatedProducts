@@ -14,6 +14,20 @@ const selectAll = (cb) => {
   })
 };
 
+const getFifteenEntries = (cb) => {
+  const queryString = `SELECT * FROM products limit 15;`
+  db.query(queryString, (err, theGoods) => {
+    if (err){
+      console.log(`I'll be monkey food if I don't leave!`);
+      cb(err);
+      cb.end();
+    } else {
+      cb(theGoods.rows);
+      db.end();
+    }
+  })
+}
+
 const insertOne = () => {
 }
 
@@ -24,5 +38,6 @@ const insertOne = () => {
 // inserts one item into DB with params
 
 module.exports = {
-  selectAll
+  selectAll,
+  getFifteenEntries
 };

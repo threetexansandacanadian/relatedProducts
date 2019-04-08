@@ -10,9 +10,18 @@ app.get('/', (req, res) => {
 })
 
 //route server to db
+// app.get('/api/products', (req, res) => {
+//   //usually the req would have a search term, like * to query the db to get all
+//   db.selectAll((data) => {
+//     console.log('made it db from server!');
+//     //now sending should be the data we got back from the database
+//     res.send(data);
+//   })
+// })
+
 app.get('/api/products', (req, res) => {
   //usually the req would have a search term, like * to query the db to get all
-  db.selectAll((data) => {
+  db.getFifteenEntries((data) => {
     console.log('made it db from server!');
     //now sending should be the data we got back from the database
     res.send(data);
