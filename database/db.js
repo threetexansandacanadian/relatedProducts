@@ -20,7 +20,7 @@ const getFifteenEntries = (cb) => {
     if (err){
       console.log(`I'll be monkey food if I don't leave!`);
       cb(err);
-      cb.end();
+      db.end();
     } else {
       cb(theGoods.rows);
       db.end();
