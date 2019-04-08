@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const PORT = 4444;
+const PORT = 8080;
 const db = require('../database/db');
+
+app.use(express.static('dist'));
 
 app.get('/', (req, res) => {
   res.send('howdy!')
