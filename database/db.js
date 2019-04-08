@@ -8,8 +8,7 @@ const selectAll = (cb) => {
       cb(err);
       db.end();
     } else {
-      console.log(theGoods.rows);
-      cb(theGoods);
+      cb(theGoods.rows);
       db.end();
     }
   })

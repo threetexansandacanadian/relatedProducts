@@ -12,7 +12,15 @@ export default class RelatedProducts extends Component {
 
   componentDidMount(){
     // Do  get request to the server
-    $.get('/api/products', (data) => { console.log (data) })
+    $.get('/api/products', (data) => { 
+      console.log (data);
+
+      //Cool I got the goods now, I only need the first 10 or 15 to save to state
+
+      this.state.entries = data;
+
+      console.log(this.state);
+    });
   }
 
   render() {
