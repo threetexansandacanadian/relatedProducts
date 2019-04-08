@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "SCV": "nodemon ./server/server.js",
-    "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "new": "webpack --watch -d"
+    "start": "webpack --watch -d"
   },
   "repository": {
     "type": "git",
