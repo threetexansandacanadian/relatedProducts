@@ -1,4 +1,6 @@
-const ProductEntry = () => {
+import React from 'react';
+
+const ProductEntries = () => {
 
   //returns html which will render
   return (
@@ -8,4 +10,4 @@ const ProductEntry = () => {
   )
 }
 
-export default ProductEntry;
+export default ProductEntries;
