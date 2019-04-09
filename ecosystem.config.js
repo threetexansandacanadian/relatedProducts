@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'FEC',
-    script: './index.js'
+    script: './server.js'
   }],
   deploy: {
     production: {
@@ -10,7 +10,7 @@ module.exports = {
       key: '~/.ssh/FEC-ryden.pem',
       ref: 'origin/master',
       repo: 'https://github.com/threetexansandacanadian/relatedProducts.git',
-      path: '/home/ubuntu/relatedProducts',
+      path: '/home/ubuntu/relatedProducts/server',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
