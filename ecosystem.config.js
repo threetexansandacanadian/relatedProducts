@@ -10,7 +10,7 @@ module.exports = {
       key: '~/.ssh/FEC-ryden.pem',
       ref: 'origin/master',
       repo: 'https://github.com/threetexansandacanadian/relatedProducts.git',
-      path: 'relatedProducts',
+      path: '/home/ubuntu/FEC',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
