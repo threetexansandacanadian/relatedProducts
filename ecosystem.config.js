@@ -7,7 +7,7 @@ module.exports = {
     production: {
       user: 'ubuntu',
       host: 'ec2-18-219-207-105.us-east-2.compute.amazonaws.com',
-      key: '~/.ssh/rsa_id.pem',
+      key: '~/.ssh/FEC-ryden.pem',
       ref: 'origin/master',
       repo: 'https://github.com/threetexansandacanadian/relatedProducts.git',
       path: '/home/ubuntu/FEC',
