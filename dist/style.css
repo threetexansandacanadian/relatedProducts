@@ -1,0 +1,30 @@
+.ProductList {
+  display: flex;
+  width: 900px;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.ProductEntry-Container {
+  padding: 50px;
+  width: 400px;
+  height: 200px;
+}
+
+.ProductEntry-Image {
+  cursor: pointer;
+  text-align: center;
+}
+
+.ProductEntry-Name {
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ProductEntry-Price {
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
