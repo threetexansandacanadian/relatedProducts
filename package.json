@@ -23,6 +23,7 @@
   "homepage": "https://github.com/threetexansandacanadian/relatedProducts#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "css-loader": "^2.1.1",
     "dotenv": "^7.0.0",
     "dotenv-webpack": "^1.7.0",
     "express": "^4.16.4",
@@ -31,7 +32,8 @@
     "pg": "^7.9.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "style-loader": "^0.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
