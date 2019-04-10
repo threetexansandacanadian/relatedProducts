@@ -1,12 +1,14 @@
 import React from 'react';
 
 const ProductEntry = (props) => {
-  console.log(props);
-  //returns html which will render
-  // console.log('uh??')
+  // const style = {display: 'inline-block'};
   return (
-    <div>
-      <div>{props.entry.productName}</div>
+    <div className="ProductEntry-Container">
+    <div className="ProductEntry-Image">
+      <p>thumbnail</p>
+    </div>
+      <div className="ProductEntry-Name">{props.entry.productName}</div>
+      <div className="ProductEntry-Price">${props.entry.productPrice}</div> 
     </div>
   )
 }

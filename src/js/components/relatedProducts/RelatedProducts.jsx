@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ProductList from '../productList/ProductList.jsx';
+// import ItemCarousel from '../itemCarousel/ItemCarousel.jsx';
 import $ from 'jquery';
 
 export default class RelatedProducts extends Component {
@@ -16,14 +17,10 @@ export default class RelatedProducts extends Component {
   //request data upon mounting
   componentDidMount(){
     $.get('/api/products', (data) => {
-      const entryVar = data;
-
       this.setState({
-        entries: entryVar, 
+        entries: data, 
         mountStatus: true
       });
-
-      // console.log(this.state);
     });
   }
 
@@ -34,20 +31,19 @@ export default class RelatedProducts extends Component {
       return (
         <div>
           {productsList}
-          <p>Uh??</p>
         </div>
       );
     } else {
-        return (
+      return (
+        <div>
+          Behold!
           <div>
-            Behold!
-            <div>
-              <span>Go left / Go right</span>
-            </div>
-            {noPage}
+            <span>Go left / Go right</span>
           </div>
-        )
-      }
+          {noPage}
+        </div>
+      );
+    }
   }
 }
 
