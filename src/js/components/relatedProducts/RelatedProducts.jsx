@@ -16,7 +16,7 @@ export default class RelatedProducts extends Component {
 
   //request data upon mounting
   componentDidMount(){
-    $.get('/api/products', (data) => {
+    $.get('fec.cqmmlgdwsvgu.us-east-2.rds.amazonaws.com/api/products', (data) => {
       this.setState({
         entries: data, 
         mountStatus: true
