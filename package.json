@@ -23,6 +23,7 @@
   "homepage": "https://github.com/threetexansandacanadian/relatedProducts#readme",
   "dependencies": {
     "dotenv": "^7.0.0",
+    "dotenv-webpack": "^1.7.0",
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "nodemon": "^1.18.10",
