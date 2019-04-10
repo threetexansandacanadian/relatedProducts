@@ -5,9 +5,9 @@ const db = require('../database/db');
 
 app.use(express.static('dist'));
 
-app.get('/', (req, res) => {
-  res.send('howdy!')
-})
+// app.get('/', (req, res) => {
+//   res.send('howdy!')
+// })
 
 //route server to db
 // app.get('/api/products', (req, res) => {
