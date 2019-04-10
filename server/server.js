@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
-const PORT = 8080;
+const PORT = 4444;
 const db = require('../database/db');
 
 app.use(express.static('dist'));
+
 
 app.get('/api/products', (req, res) => {
   //usually the req would have a search term, like * to query the db to get all
