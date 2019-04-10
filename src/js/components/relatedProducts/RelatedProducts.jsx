@@ -10,34 +10,44 @@ export default class RelatedProducts extends Component {
     this.state = {
       entries: ['Howdy', `Yee'Haw`, 'Steak', 'Moose'], // dummy data
       mountStatus: false,
-      page: (<div> Nothing here </div>)
     }
   }
 
   //request data upon mounting
   componentDidMount(){
     $.get('/api/products', (data) => {
+      const entryVar = data;
+
       this.setState({
-        entries: data, 
-        mountStatus: true,
-        page: (<ProductList entries={data}/>)
+        entries: entryVar, 
+        mountStatus: true
       });
 
-      console.log(this.state);
+      // console.log(this.state);
     });
   }
 
   render() {
-
-    return (
-      <div>
-        Behold!
+    const noPage = (<div> Nothing here </div>);
+    const productsList = (<ProductList entries={this.state.entries}/>)
+    if (this.state.mountStatus === true){
+      return (
         <div>
-          <span>Go left / Go right</span>
+          {productsList}
+          <p>Uh??</p>
         </div>
-        {this.state.page}
-      </div>
-    );
+      );
+    } else {
+        return (
+          <div>
+            Behold!
+            <div>
+              <span>Go left / Go right</span>
+            </div>
+            {noPage}
+          </div>
+        )
+      }
   }
 }
 
