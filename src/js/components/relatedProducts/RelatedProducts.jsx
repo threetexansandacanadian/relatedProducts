@@ -16,7 +16,7 @@ export default class RelatedProducts extends Component {
 
   //request data upon mounting
   componentDidMount(){
-    $.get('/api/products', (data) => {
+    $.get('http://ec2-18-219-207-105.us-east-2.compute.amazonaws.com/api/products', (data) => {
       this.setState({
         entries: data, 
         mountStatus: true
