@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ProductEntry = (props) => {
-  console.log(props.entry.productprice);
   return (
     <div className="ProductEntry-Container">
   
