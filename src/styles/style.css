@@ -28,3 +28,8 @@
   cursor: pointer;
   font-weight: bold;
 }
+
+img{
+  height: 100px;
+  width: 100px;
+}
