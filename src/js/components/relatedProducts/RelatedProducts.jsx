@@ -25,7 +25,7 @@ export default class RelatedProducts extends Component {
   }
 
   render() {
-    const noPage = (<div> Nothing here </div>);
+    const noPage = (<div> Loading ...  </div>);
     const productsList = (<ProductList entries={this.state.entries}/>)
     if (this.state.mountStatus === true){
       return (
@@ -36,10 +36,6 @@ export default class RelatedProducts extends Component {
     } else {
       return (
         <div>
-          Behold!
-          <div>
-            <span>Go left / Go right</span>
-          </div>
           {noPage}
         </div>
       );

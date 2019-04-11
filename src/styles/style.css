@@ -1,9 +1,22 @@
+/* Global */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* React Components */
+
+.ProductEntry-Thumbnail{
+  height: 100px;
+  width: 100px;
+}
+
 .ProductList {
   display: flex;
   width: 900px;
   height: 200px;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
+  white-space: nowrap;
 }
 
 .ProductEntry-Container {
@@ -29,7 +42,20 @@
   font-weight: bold;
 }
 
-img{
-  height: 100px;
-  width: 100px;
+.ButtonLeft{
+  border-radius: 5px;
+  background-color: aquamarine;
+  width: 50px;
+  height: 200px;
+}
+
+.ButtonRight{
+  border-radius: 5px;
+  background-color: aquamarine;
+  width: 50px;
+  height: 200px;
+}
+
+.RelatedProducts{
+  display: flex;
 }

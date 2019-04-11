@@ -7,7 +7,7 @@ const ProductEntry = (props) => {
     <div className="ProductEntry-Container">
   
       <div className="ProductEntry-Image">
-        <img src={props.entry.productpic}></img>
+        <img src={props.entry.productpic} class="ProductEntry-Thumbnail"></img>
       </div>
 
       <div className="ProductEntry-Name">{props.entry.productname}</div>
