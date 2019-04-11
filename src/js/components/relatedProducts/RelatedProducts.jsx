@@ -30,13 +30,13 @@ export default class RelatedProducts extends Component {
   }
 
   buttonLeftClick(){
-    document.getElementById("ProductList").scrollLeft -= 150;
-    this.timer = setTimeout(this.buttonLeftClick, 200);
+    document.getElementById("ProductList").scrollLeft -= 400;
+    this.timer = setTimeout(this.buttonLeftClick, 800);
   }
 
   buttonRightClick(){
-    document.getElementById("ProductList").scrollLeft += 150;
-    this.timer = setTimeout(this.buttonRightClick, 200);
+    document.getElementById("ProductList").scrollLeft += 400;
+    this.timer = setTimeout(this.buttonRightClick, 800);
   }
 
   buttonEndClick(){
