@@ -10,7 +10,8 @@
   width: 100px;
 }
 
-.ProductList {
+#ProductList {
+  scroll-behavior: smooth;
   display: flex;
   width: 900px;
   height: 200px;
@@ -20,7 +21,10 @@
 }
 
 .ProductEntry-Container {
-  padding: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   width: 400px;
   height: 200px;
 }
@@ -31,9 +35,15 @@
 }
 
 .ProductEntry-Name {
+  color: rgb(72, 72, 255);
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.ProductEntry-Container:hover > .ProductEntry-Name{
+  text-decoration: underline;
+  color: rgb(214, 139, 0); 
 }
 
 .ProductEntry-Price {
@@ -43,19 +53,46 @@
 }
 
 .ButtonLeft{
-  border-radius: 5px;
-  background-color: aquamarine;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+  right: 25px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: rgb(139, 139, 139);
   width: 50px;
-  height: 200px;
+  height: 100px;
+  text-align: center;
+  outline: none;
+}
+
+.ButtonLeft:focus{
+  outline: none;
 }
 
 .ButtonRight{
-  border-radius: 5px;
-  background-color: aquamarine;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: rgb(139, 139, 139);
   width: 50px;
-  height: 200px;
+  height: 100px;
+  text-align: center;
+}
+
+.ButtonRight:focus{
+  outline: none;
 }
 
 .RelatedProducts{
   display: flex;
+  padding-left: 25px;
+  padding-right: 25px;
 }

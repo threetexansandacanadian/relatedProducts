@@ -12,6 +12,11 @@ export default class RelatedProducts extends Component {
       entries: ['Howdy', `Yee'Haw`, 'Steak', 'Moose'], // dummy data
       mountStatus: false,
     }
+
+    this.timer = null;
+    this.buttonLeftClick = this.buttonLeftClick.bind(this);
+    this.buttonRightClick = this.buttonRightClick.bind(this);
+    this.buttonEndClick = this.buttonEndClick.bind(this);
   }
 
   //request data upon mounting
@@ -24,9 +29,26 @@ export default class RelatedProducts extends Component {
     });
   }
 
+  buttonLeftClick(){
+    document.getElementById("ProductList").scrollLeft -= 150;
+    this.timer = setTimeout(this.buttonLeftClick, 200);
+  }
+
+  buttonRightClick(){
+    document.getElementById("ProductList").scrollLeft += 150;
+    this.timer = setTimeout(this.buttonRightClick, 200);
+  }
+
+  buttonEndClick(){
+    clearTimeout(this.timer);
+  }
+
   render() {
     const noPage = (<div> Loading ...  </div>);
-    const productsList = (<ProductList entries={this.state.entries}/>)
+    const productsList = (<ProductList entries={this.state.entries} 
+                            handleButtonLeft={this.buttonLeftClick.bind(this)} 
+                            handleButtonRight={this.buttonRightClick.bind(this)}
+                            handleMouseUp={this.buttonEndClick.bind(this)}/>)
     if (this.state.mountStatus === true){
       return (
         <div>

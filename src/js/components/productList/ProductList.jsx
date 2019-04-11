@@ -4,19 +4,24 @@ import ProductEntry from '../productEntry/ProductEntry.jsx';
 const ProductList = (props) => {
   return (        
     <div className="RelatedProducts">
-      <div className="ButtonLeft">
-        Button Left
-      </div>
+      <button className="ButtonLeft" 
+      onMouseDown={() => props.handleButtonLeft()} 
+      onMouseUp={() => props.handleMouseUp()}>
+        &lt;
+      </button>
 
-      <div className="ProductList">
+      <div id="ProductList">
         {props.entries.map((product) => {
           return <ProductEntry entry={product} key={product.id}/>
         })}
       </div>
       
-      <div className="ButtonRight">
-        Button Right
-      </div>
+      <button className="ButtonRight" 
+      onMouseDown={() => props.handleButtonRight()}
+      onMouseUp={() => props.handleMouseUp()}
+      >
+        &gt;
+      </button>
 
     </div>
     );
