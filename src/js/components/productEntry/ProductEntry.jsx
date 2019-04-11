@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProductEntry = (props) => {
-  console.log(props.entry.trunc);
+  console.log(props.entry.productprice);
   return (
     <div className="ProductEntry-Container">
   
@@ -10,7 +10,7 @@ const ProductEntry = (props) => {
       </div>
 
       <div className="ProductEntry-Name">{props.entry.productname}</div>
-      <div className="ProductEntry-Price">${props.entry.trunc}</div> 
+      <div className="ProductEntry-Price">${props.entry.productprice}</div> 
     </div>
   )
 }
