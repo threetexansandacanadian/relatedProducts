@@ -15,7 +15,7 @@ const selectAll = (cb) => {
 };
 
 const getFifteenEntries = (cb) => {
-  const queryString = `SELECT id, productname, productpic, TRUNC(productprice, 2), producttype FROM products LIMIT 15;`
+  const queryString = `SELECT * FROM products LIMIT 15;`
   db.query(queryString, (err, theGoods) => {
     if (err){
       console.log(`I'll be monkey food if I don't leave!`);
