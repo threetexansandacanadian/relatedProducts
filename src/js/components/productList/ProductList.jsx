@@ -12,7 +12,6 @@ const ProductList = (props) => {
 
       <div id="ProductList">
         {props.entries.map((product) => {
-          console.log(product)
           return <ProductEntry entry={product} key={product.id}/>
         })}
       </div>
