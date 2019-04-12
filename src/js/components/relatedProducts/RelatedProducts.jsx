@@ -29,22 +29,25 @@ export default class RelatedProducts extends Component {
     });
   }
 
+  //method for scrolling left
   buttonLeftClick(){
     document.getElementById("ProductList").scrollLeft -= 400;
     this.timer = setTimeout(this.buttonLeftClick, 800);
   }
 
+  //method for scrolling right
   buttonRightClick(){
     document.getElementById("ProductList").scrollLeft += 400;
     this.timer = setTimeout(this.buttonRightClick, 800);
   }
 
+  //endscroll method for onMouseUp and onMouseLeave
   buttonEndClick(){
     clearTimeout(this.timer);
   }
 
+  //dispatch event for other components that are listening for statechange
   productClick(id){
-    console.log('event dispatched to window from relatedProducts, prodId:', id);
     window.dispatchEvent(
       new CustomEvent('updateProdId', {detail: id})
       );
