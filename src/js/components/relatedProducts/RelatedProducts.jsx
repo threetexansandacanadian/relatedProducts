@@ -21,6 +21,11 @@ export default class RelatedProducts extends Component {
 
   //request data upon mounting
   componentDidMount(){
+    window.addEventListener('updateProdId', this.getProductsFromAPI.bind(this));
+    this.getProductsFromAPI();
+  }
+
+  getProductsFromAPI(){
     $.get('http://ec2-18-219-207-105.us-east-2.compute.amazonaws.com/api/products', (data) => {
       this.setState({
         entries: data, 
@@ -63,7 +68,7 @@ export default class RelatedProducts extends Component {
     if (this.state.mountStatus === true){
       return (
         <div className="CAB-Panel">
-
+          <button className="Demo" onClick={() => this.componentDidMount()}>Demo GET request</button>
           <p className="CAB-Text">Here are some other related products</p>
 
           <div className="RelatedProducts-App-Container">

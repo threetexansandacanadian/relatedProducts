@@ -26,8 +26,6 @@ const getFifteenEntries = (cb) => {
   })
 }
 
-getFifteenEntries(console.log)
-
 module.exports = {
   getFifteenEntries
 };
