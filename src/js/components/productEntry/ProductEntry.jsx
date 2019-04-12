@@ -1,8 +1,8 @@
 import React from 'react';
 
 const ProductEntry = (props) => {
-  return (
-    <div className="ProductEntry-Container" onClick={() => props.handleProductClick()}>
+    return (
+    <div className="ProductEntry-Container" onClick={() => props.handleProductClick(props.entry.id)}>
   
       <div className="ProductEntry-Image">
         <img src={props.entry.productpic} className="ProductEntry-Thumbnail"></img>

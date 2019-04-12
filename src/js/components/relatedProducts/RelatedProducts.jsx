@@ -43,10 +43,10 @@ export default class RelatedProducts extends Component {
     clearTimeout(this.timer);
   }
 
-  productClick(){
-    console.log('event dispatched to window from relatedProducts');
+  productClick(id){
+    console.log('event dispatched to window from relatedProducts, prodId:', id);
     window.dispatchEvent(
-      new CustomEvent('updateProdId', {detail: 3})
+      new CustomEvent('updateProdId', {detail: id})
       );
   }
 
