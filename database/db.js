@@ -15,7 +15,7 @@ const selectAll = (cb) => {
 };
 
 const getFifteenEntries = (cb) => {
-  const queryString = `SELECT * FROM products LIMIT 15;`
+  const queryString = `select * from products order by random() limit 15;`
   db.query(queryString, (err, theGoods) => {
     if (err){
       console.log(`I'll be monkey food if I don't leave!`);
@@ -26,7 +26,8 @@ const getFifteenEntries = (cb) => {
   })
 }
 
+getFifteenEntries(console.log)
+
 module.exports = {
-  selectAll,
   getFifteenEntries
 };
