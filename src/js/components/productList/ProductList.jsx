@@ -12,7 +12,7 @@ const ProductList = (props) => {
 
       <div id="ProductList">
         {props.entries.map((product) => {
-          return <ProductEntry entry={product} key={product.id}/>
+          return <ProductEntry entry={product} key={product.id} handleProductClick={props.handleProductClick}/>
         })}
       </div>
       

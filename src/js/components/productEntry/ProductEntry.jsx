@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductEntry = (props) => {
   return (
-    <div className="ProductEntry-Container">
+    <div className="ProductEntry-Container" onClick={() => props.handleProductClick()}>
   
       <div className="ProductEntry-Image">
         <img src={props.entry.productpic} className="ProductEntry-Thumbnail"></img>

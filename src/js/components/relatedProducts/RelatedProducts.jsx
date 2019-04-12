@@ -43,12 +43,20 @@ export default class RelatedProducts extends Component {
     clearTimeout(this.timer);
   }
 
+  productClick(){
+    console.log('uh')
+    window.dispatchEvent(
+      new CustomEvent('updateProdId', {detail: 3})
+      );
+  }
+
   render() {
     const noPage = (<div> Loading ...  </div>);
     const productsList = (<ProductList entries={this.state.entries} 
                             handleButtonLeft={this.buttonLeftClick.bind(this)} 
                             handleButtonRight={this.buttonRightClick.bind(this)}
-                            handleMouseUp={this.buttonEndClick.bind(this)}/>)
+                            handleMouseUp={this.buttonEndClick.bind(this)}
+                            handleProductClick={this.productClick.bind(this)}/>)
     if (this.state.mountStatus === true){
       return (
         <div>
