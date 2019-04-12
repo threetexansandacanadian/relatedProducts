@@ -58,17 +58,21 @@ export default class RelatedProducts extends Component {
       );
   }
 
+  handleNewGetRequest(){
+    document.getElementById("ProductList").scrollLeft = 0;
+  }
+
   render() {
     const noPage = (<div> Loading ...  </div>);
     const productsList = (<ProductList entries={this.state.entries} 
                             handleButtonLeft={this.buttonLeftClick.bind(this)} 
                             handleButtonRight={this.buttonRightClick.bind(this)}
                             handleMouseUp={this.buttonEndClick.bind(this)}
-                            handleProductClick={this.productClick.bind(this)}/>)
+                            handleProductClick={this.productClick.bind(this)}
+                            handleNewGetRequest={this.handleNewGetRequest.bind(this)}/>)
     if (this.state.mountStatus === true){
       return (
         <div className="CAB-Panel">
-          <button className="Demo" onClick={() => this.componentDidMount()}>Demo GET request</button>
           <p className="CAB-Text">Here are some other related products</p>
 
           <div className="RelatedProducts-App-Container">

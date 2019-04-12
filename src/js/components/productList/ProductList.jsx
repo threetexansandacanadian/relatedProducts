@@ -4,7 +4,6 @@ import ProductEntry from '../productEntry/ProductEntry.jsx';
 const ProductList = (props) => {
   return (        
     <div className="RelatedProducts">
-
       <button className="ButtonLeft" 
       onMouseDown={() => props.handleButtonLeft()} 
       onMouseLeave={() => props.handleMouseUp()}
