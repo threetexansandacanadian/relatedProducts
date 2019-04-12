@@ -62,8 +62,14 @@ export default class RelatedProducts extends Component {
                             handleProductClick={this.productClick.bind(this)}/>)
     if (this.state.mountStatus === true){
       return (
-        <div className="relatedProducts-App-Container">
-          {productsList}
+        <div className="CAB-Panel">
+
+          <p className="CAB-Text">Here are some other related products</p>
+
+          <div className="RelatedProducts-App-Container">
+            {productsList}
+          </div>
+
         </div>
       );
     } else {
