@@ -6,6 +6,7 @@ const ProductList = (props) => {
     <div className="RelatedProducts">
       <button className="ButtonLeft" 
       onMouseDown={() => props.handleButtonLeft()} 
+      onMouseLeave={() => props.handleMouseUp()}
       onMouseUp={() => props.handleMouseUp()}>
         &lt;
       </button>
@@ -18,8 +19,8 @@ const ProductList = (props) => {
       
       <button className="ButtonRight" 
       onMouseDown={() => props.handleButtonRight()}
-      onMouseUp={() => props.handleMouseUp()}
-      >
+      onMouseLeave={() => props.handleMouseUp()}
+      onMouseUp={() => props.handleMouseUp()}>
         &gt;
       </button>
 
