@@ -44,7 +44,7 @@ export default class RelatedProducts extends Component {
   }
 
   productClick(){
-    console.log('uh')
+    console.log('event dispatched to window from relatedProducts');
     window.dispatchEvent(
       new CustomEvent('updateProdId', {detail: 3})
       );
