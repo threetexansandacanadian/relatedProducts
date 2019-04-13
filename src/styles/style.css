@@ -66,7 +66,6 @@ body {
   color: rgb(72, 72, 255);
   text-align: center;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .ProductEntry-Container:hover > .ProductEntry-Name{
