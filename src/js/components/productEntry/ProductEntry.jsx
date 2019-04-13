@@ -8,7 +8,7 @@ const ProductEntry = (props) => {
         <img src={props.entry.productpic} className="ProductEntry-Thumbnail"></img>
       </div>
 
-      <div className="ProductEntry-Name">{props.entry.productname}</div>
+      <p className="ProductEntry-Name">{props.entry.productname}</p>
       <div className="ProductEntry-Price">${props.entry.productprice}</div> 
     </div>
   )
