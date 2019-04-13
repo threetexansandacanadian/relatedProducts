@@ -1,11 +1,21 @@
 /* React Components */
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .RelatedProducts-App-Container {
   display: flex;
   justify-content: center;
 }
 
 .CAB-Panel {
+}
+
+#relatedProducts {
+  display: flex;
+  position: relative;
+  left: 10%;
 }
 
 .CAB-Text {
@@ -23,10 +33,10 @@
 #ProductList {
   scroll-behavior: smooth;
   display: flex;
-  width: 900px;
+  width: 30%;
   height: 200px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: overlay;
+  overflow-y: overlay;
   white-space: nowrap;
 }
 
@@ -37,9 +47,7 @@
 .ProductEntry-Container {
   padding-left: 40px;
   padding-right: 40px;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  width: 400px;
+  width: 200px;
   height: 200px;
 }
 
@@ -76,7 +84,7 @@
   color: white;
   cursor: pointer;
   position: relative;
-  top: 25px;
+  top: 15px;
   right: 25px;
   border-radius: 10px 0px 0px 10px;
   background-color: rgb(139, 139, 139);
@@ -96,7 +104,7 @@
   color: white;
   cursor: pointer;
   position: relative;
-  top: 25px;
+  top: 15px;
   left: 25px;
   border-radius: 0px 10px 10px 0px;
   background-color: rgb(139, 139, 139);
