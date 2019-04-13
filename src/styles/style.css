@@ -57,7 +57,7 @@ body {
 }
 
 .ProductEntry-Name {
-  width: 200px;
+  width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-all;
