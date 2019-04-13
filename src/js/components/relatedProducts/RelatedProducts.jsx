@@ -73,7 +73,7 @@ export default class RelatedProducts extends Component {
     if (this.state.mountStatus === true){
       return (
         <div className="CAB-Panel">
-          <p className="CAB-Text">Here are some other related products</p>
+          <p className="CAB-Text">Customers who have bought this item also bought</p>
 
           <div className="RelatedProducts-App-Container">
             {productsList}
