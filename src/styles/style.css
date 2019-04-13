@@ -12,12 +12,6 @@ body {
 .CAB-Panel {
 }
 
-#relatedProducts {
-  display: flex;
-  position: relative;
-  left: 10%;
-}
-
 .CAB-Text {
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -33,10 +27,10 @@ body {
 #ProductList {
   scroll-behavior: smooth;
   display: flex;
-  width: 30%;
+  width: 1600px;
   height: 200px;
-  overflow-x: overlay;
-  overflow-y: overlay;
+  overflow-x: auto;
+  overflow-y: auto;
   white-space: nowrap;
 }
 
