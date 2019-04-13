@@ -52,7 +52,8 @@ body {
 
 .ProductEntry-Image {
   cursor: pointer;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ProductEntry-Name {
