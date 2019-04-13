@@ -53,6 +53,7 @@ export default class RelatedProducts extends Component {
 
   //dispatch event for other components that are listening for statechange
   productClick(id){
+    window.scrollTo(0,0);
     window.dispatchEvent(
       new CustomEvent('updateProdId', {detail: id})
       );
