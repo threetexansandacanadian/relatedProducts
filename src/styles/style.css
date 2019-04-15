@@ -135,3 +135,17 @@ body {
 #relatedProducts{
   max-width: 100%;
 }
+
+/* This CSS will latch onto Matt's photoGallery. This will affect mobile */
+
+.fullScreenContainer {
+  margin-top: none;
+  margin-bottom: none;
+  object-fit: contain;
+}
+
+.fullScreen {
+  object-fit: none;
+  width: 80vw;
+  left: 3%;
+}
