@@ -138,7 +138,7 @@ body {
 
 /* This CSS will latch onto Matt's photoGallery. This will affect mobile */
 
-.fullScreenContainer {
+div.fullScreenContainer {
   width: 100vw;
   height: 100vh;
   background: #eeeeee;
@@ -151,10 +151,10 @@ body {
   /* object-fit: contain; */
   margin-top: none;
   margin-bottom: none;
-  object-fit: contain;
+  /* object-fit: contain; */
 }
 
-.fullScreenContainer > .fullScreen {
+img.fullScreen {
   position: relative;
   left: -4%;
   height: 70vh;
