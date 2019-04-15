@@ -22,12 +22,6 @@ body {
   color: #c60;
 }
 
-.ProductEntry-Thumbnail{
-  object-fit: contain;
-  height: 150px;
-  width: 150px;
-}
-
 #ProductList {
   /* border: solid;
   border-width: 1px;
@@ -56,6 +50,12 @@ body {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+}
+
+.ProductEntry-Thumbnail{
+  object-fit: contain;
+  height: 150px;
+  width: 150px;
 }
 
 .ProductEntry-Name {
@@ -139,13 +139,26 @@ body {
 /* This CSS will latch onto Matt's photoGallery. This will affect mobile */
 
 .fullScreenContainer {
+  width: 100vw;
+  height: 100vh;
+  background: #eeeeee;
+  opacity: 0.999;
+  vertical-align: top;
+  text-align: center;
+  z-index: 1;
+  /* margin-top: 6px; */
+  /* margin-bottom: 0px; */
+  /* object-fit: contain; */
   margin-top: none;
   margin-bottom: none;
   object-fit: contain;
 }
 
-.fullScreen {
-  object-fit: none;
-  width: 80vw;
-  left: 3%;
+.fullScreenContainer > .fullScreen {
+  position: relative;
+  left: -4%;
+  height: 70vh;
+  width: 100vw;
+  z-index: 2;
+  object-fit: contain;
 }
