@@ -7,7 +7,8 @@ const ProductList = (props) => {
       <button className="ButtonLeft" 
       onMouseDown={() => props.handleButtonLeft()} 
       onMouseLeave={() => props.handleMouseUp()}
-      onMouseUp={() => props.handleMouseUp()}>
+      onMouseUp={() => props.handleMouseUp()}
+      >
         &lt;
       </button>
 
