@@ -20,3 +20,9 @@ To serve up the app:
 ``` npm run SCV ```
 
 The server will listen on `localhost:4444`
+
+## Additional Tips
+
+If you'd like to populate a database for this to run off of, check out my productEntryGenerotior!
+
+https://github.com/ryanferrer/productEntryGenerator
